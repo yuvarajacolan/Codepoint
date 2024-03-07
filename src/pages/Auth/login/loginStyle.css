@@ -1,0 +1,45 @@
+.paragraphtxt{
+    width: 70%;
+    text-align: left;
+    line-height: 32px;
+    margin-left: 40px;
+}
+.textfield{
+    margin: 10px;
+    width: 100%;
+    box-shadow: 0px 18px 30px 0px rgb(255 52 221 / 4%);
+    border-radius: 10px;
+}
+.btnwidth{
+    width:100%;
+    text-transform: none !important;
+    padding: 12px 0;
+    background-color: #961f7f !important;
+    
+}
+.logoplacing{
+    display: flex;
+    justify-content: start;
+    margin-bottom: 25px;
+}
+.corner-img{
+    position: absolute;
+    right: 0px;
+}
+.fontweight{
+    font-weight: 800 !important;
+}
+.footer{
+        box-shadow: 0px -4px 30px 0px rgba(0, 0, 0, 0.1);
+        height: 57px;
+        color: rgba(56, 56, 56, 1);
+        font-weight: 300;
+        font-size: 14px;
+        font-family: 'Inter';
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: 0px;
+        position: absolute;
+}
