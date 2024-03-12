@@ -1,129 +1,121 @@
-import React, { useState } from "react";
-import Box from "@mui/material/Box";
-import Grid from "@mui/material/Unstable_Grid2";
+import React, { useEffect, useState } from "react";
 import logoimg from "../../../assets/images/logo.png";
-import "./login.css";
+import "./loginStyle.css";
 import mainimg from "../../../assets/images/side-img.png";
-import fullimg from "../../../assets/images/voi 1.png";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-import { TextField } from "@mui/material";
-import IconButton from "@material-ui/core/IconButton";
-import VisibilityIcon from "@material-ui/icons/Visibility";
-import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
+import bigimg from "../../../assets/images/voi 1.png";
+import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
+import { Layout, Row, Col, Card, Form, Input, Button } from "antd";
+
 const Loginindex = () => {
-  const [showPassword, setShowPassword] = useState(false);
-  const handleTogglePasswordVisibility = () => {
-    setShowPassword((prevShowPassword) => !prevShowPassword);
+  const onFinish = (values) => {
+    console.log("Received values of form: ", values);
   };
+
   return (
     <>
       <div className="corner-img">
-        <img src={mainimg} alt="corner-img" />
+        <img src={mainimg} className="img-adjusment" alt="corner-img" />
       </div>
       <div className="logoplacing">
         <img src={logoimg} alt="logo" />
       </div>
+      <div>
+        <Row justify="space-evenly" align="middle">
+          <Col className="gutter-row" xs={24} sm={12} md={8} lg={6} xl={6}>
+            <Row>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud.
+              </p>
+              <img src={bigimg} alt="" className="img-adjusment" />
+            </Row>
+          </Col>
+          <Col className="gutter-row" xs={24} sm={12} md={8} lg={6} xl={6}>
+            <Card
+              className="cardbox"
+              title={
+                <span
+                  style={{
+                    fontWeight: 900,
+                    fontSize: "18px",
+                    borderBottom: "0px",
+                  }}
+                >
+                  Sign in
+                </span>
+              }
+              bordered={false}
+              style={{
+                width: "100%",
+                maxWidth: 400,
+                margin: "auto",
+              }}
+              headStyle={{ borderBottom: 0 }}
+            >
+              <Form
+                name="normal_login"
+                className="login-form"
+                initialValues={{
+                  remember: true,
+                }}
+                onFinish={onFinish}
+              >
+                <Form.Item
+                  name="username"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please input your Email or Phone number!",
+                    },
+                  ]}
+                >
+                  <Input
+                    className="box-shadow"
+                    size="large"
+                    placeholder="Enter Email or Phone number"
+                  />
+                </Form.Item>
+                <Form.Item
+                  name="password"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please input your Password!",
+                    },
+                  ]}
+                >
+                  <Input.Password
+                    size="large"
+                    className="box-shadow"
+                    placeholder="password"
+                    iconRender={(visible) =>
+                      visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />
+                    }
+                  />
+                </Form.Item>
 
-      <Grid container direction="row">
-        <Grid
-          container
-          direction="row"
-          justifyContent="center"
-          alignItems="center"
-          xs={12}
-        >
-          <Grid
-            container
-            direction="column"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <p className="">Lorem ipsum dolor sit amet, con</p>
-            <img src={fullimg} alt="mainimg" />
-          </Grid>
-
-          <Grid direction="column">
-            <Card sx={{ minWidth: 500 }}>
-              <CardContent>
-                <Grid container direction={"column"} spacing={2}>
-                  <Grid>
-                    <Typography
-                      variant="h6"
-                      className="fontweight"
-                      component="div"
-                    >
-                      Sign in
-                    </Typography>
-                  </Grid>
-                  <Grid>
-                    <TextField
-                      id="password"
-                      className="textfield"
-                      label="Enter Email or Phonenumber"
-                      type="password"
-                      variant="outlined"
-                      InputLabelProps={{
-                        shrink: false,
-                      }}
-                    />
-                  </Grid>
-                  <Grid>
-                    <TextField
-                      id="password"
-                      className="textfield"
-                      label="Password"
-                      type={showPassword ? "text" : "password"}
-                      variant="outlined"
-                      InputLabelProps={{
-                        shrink: false,
-                      }}
-                      InputProps={{
-                        endAdornment: (
-                          <IconButton
-                            aria-label="toggle password visibility"
-                            onClick={handleTogglePasswordVisibility}
-                            edge="end"
-                          >
-                            {showPassword ? (
-                              <VisibilityIcon />
-                            ) : (
-                              <VisibilityOffIcon />
-                            )}
-                          </IconButton>
-                        ),
-                      }}
-                    />
-                  </Grid>
-                  <Typography
-                    variant="caption"
-                    display="block"
-                    textAlign="right"
-                    gutterBottom
-                    style={{ padding: "0 12px" }}
+                <Form.Item>
+                  <Button
+                    type="primary"
+                    block
+                    htmlType="submit"
+                    className="login-form-button btncolor"
+                    size="large"
                   >
-                    Recover Password ?
-                  </Typography>
-                  <Grid>
-                    <Button
-                      variant="contained"
-                      size="large"
-                      className="btnwidth"
-                    >
-                      Sign in
-                    </Button>
-                  </Grid>
-                </Grid>
-              </CardContent>
+                    Sign in
+                  </Button>
+                </Form.Item>
+              </Form>
             </Card>
-          </Grid>
-        </Grid>
-      </Grid>
-      <Grid container justifyContent="center">
-        <Typography className="footer">Colan Infotech © 2024</Typography>
-      </Grid>
+          </Col>
+        </Row>
+        <Card bordered={false} className="footer">
+          <Row justify="space-evenly" align="middle">
+            Colan Infotech &copy;2024
+          </Row>
+        </Card>
+      </div>
     </>
   );
 };
