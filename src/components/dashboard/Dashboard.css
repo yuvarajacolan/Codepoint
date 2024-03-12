@@ -1,0 +1,37 @@
+.chart_box {
+    background-color: #fff;
+    padding: 24px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 10px;
+}
+
+.router_name {
+    line-height: 25px;
+}
+
+.header_section {
+    padding: 18px 40px;
+}
+
+.notification_bell {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5F7FA;
+    border-radius: 50%;
+}
+
+.notification_bell img {
+    width: 25px;
+    height: 25px;
+}
+
+.header_right_section {
+    gap: 30px;
+}
+
+.header_right_section div {
+    cursor: pointer;
+}

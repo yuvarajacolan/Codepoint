@@ -2,13 +2,16 @@ import React, { useState } from "react";
 import logoimg from "../../assets/images/logo.png";
 import "./style.css";
 import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
-import { Layout, Menu, Button, theme, Row, Typography } from "antd";
-import { Link, Outlet, useNavigate } from "react-router-dom";
+import { Layout, Menu, Button, theme, Row, Typography, Flex } from "antd";
+import { Link, Outlet, useNavigate, useLocation } from "react-router-dom";
 import { menuItems } from "../../utils/constants/Menuitems";
+import NotificationBell from "../../assets/images/notificationBell.png";
+import Profile from "../../assets/images/Profile.png";
 const { Title } = Typography;
 const { Header, Sider, Content } = Layout;
 const Sidebar = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [collapsed, setCollapsed] = useState(false);
   const {
     token: { colorBgContainer, borderRadiusLG },
@@ -17,6 +20,8 @@ const Sidebar = () => {
   const handleNavigation = (path) => {
     navigate(path);
   };
+
+  const currentMenuItem = menuItems.find((item) => item.to === location.pathname);
 
   return (
     <Layout>
@@ -37,23 +42,33 @@ const Sidebar = () => {
       <Layout>
         <Header
           style={{
-            padding: 0,
+            padding: "0",
             background: colorBgContainer,
+            height: "100px"
           }}
         >
-          <Row>
-            <Button
-              type="text"
-              icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-              onClick={() => setCollapsed(!collapsed)}
-              style={{
-                fontSize: "16px",
-                width: 64,
-                height: 64,
-              }}
-            />
-            <span>Dashboard</span>
-          </Row>
+          <div className="header_section flex-container">
+            <div className="flex-container">
+              <Button
+                type="text"
+                icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+                onClick={() => setCollapsed(!collapsed)}
+                style={{
+                  fontSize: "16px",
+                  width: 64,
+                }}
+              />
+              <h3 className="router_name">{currentMenuItem && currentMenuItem.label}</h3>
+            </div>
+            <div className="flex-container header_right_section">
+              <div className="notification_bell">
+                <img src={NotificationBell} alt="notification_bell" />
+              </div>
+              <div className="flex-container">
+                <img src={Profile} alt="profile" />
+              </div>
+            </div>
+          </div>
         </Header>
         <Content
           style={{

@@ -73,3 +73,13 @@ body {
 .ant-menu-item .ant-menu-item-selected {
   padding-left: 0px !important;
 }
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+span.anticon.anticon-menu-fold {
+  font-size: 25px !important;
+}
