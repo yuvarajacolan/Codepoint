@@ -1,10 +1,84 @@
-import React from 'react'
+import React, { useState } from 'react'
+import "../../../components/manageActors/manageActor.css"
+import Commonselectfield from '../../../components/common/Commonselectfield'
+import { School } from '../../../utils/constants/Selectdata'
+import Commontable from '../../../components/common/Commontable'
+import { manage_actor_data } from '../../../utils/constants/Tabledata'
+import CommonLabelWithSelect from '../../../components/common/CommonLabelWithSelect'
+import DeletePopUp from '../../../components/common/DeletePopUp'
+import SwitchToggle from '../../../components/common/CommonSwitch'
+import deleteImage from "../../../assets/images/delete.png"
+
+
 
 const ManageActor = () => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
+  const manage_actor_column = [
+    {
+      id: "slno",
+      title: "SL No",
+      dataIndex: "slno",
+      key: "slno",
+    },
+    {
+      id: "chatbot",
+      title: "Chatbot",
+      dataIndex: "chatbot",
+      key: "chatbot",
+    },
+    {
+      id: "actors",
+      title: "Actors",
+      dataIndex: "actors",
+      key: "actors",
+    },
+    {
+      id: "Status",
+      title: "Status",
+      key: "status",
+      dataIndex: "status",
+      render: (_, { status }) => (
+        // <Tag color={tags == "Active" ? "green" : "red"} key={tags}>
+        //   {tags}
+        // </Tag>
+        <SwitchToggle status={status} />
+      ),
+
+    },
+    {
+
+      id: "action",
+      title: "Action",
+      dataIndex: "actors",
+      key: "actors",
+      render: (_, { tags }) => (
+        <div onClick={() => setIsModalOpen(true)} style={{ cursor: "pointer" }}><img src={deleteImage} alt="deleteIcon" /></div>
+      ),
+
+    }
+  ];
   return (
-    <div>
-      <h2>Manag Actor</h2>
+    <div className='manage_actor_container'>
+      <h2>list of actors</h2>
+      <div>
+        <CommonLabelWithSelect width="340px" options={School} placeholdertext="School" />
+      </div>
+      <div className='manage_actor_table'>
+        <Commontable columns={manage_actor_column} data={manage_actor_data} />
+      </div>
+
+      <DeletePopUp isModalOpen={isModalOpen} handleOk={handleOk} handleCancel={handleCancel} />
     </div>
+
   )
 }
 
