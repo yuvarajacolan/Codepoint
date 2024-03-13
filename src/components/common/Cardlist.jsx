@@ -2,8 +2,8 @@ import React from 'react';
 import { Avatar, Card } from 'antd';
 import '../common/Common.css'
 const { Meta } = Card;
-const Commoncard = ({title,description,icon,backgroundColor}) => (
-    <Card
+const Cardlist = ({title,description,icon,backgroundColor}) => (
+    <div
     style={{
       width: 300,
     }}
@@ -45,6 +45,6 @@ const Commoncard = ({title,description,icon,backgroundColor}) => (
       />
     </div>
     
-  </Card>
+  </div>
 );
-export default Commoncard;
+export default Cardlist;

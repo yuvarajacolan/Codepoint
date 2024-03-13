@@ -1,15 +1,29 @@
-import React from 'react'
-import Commoncard from '../../../components/common/Commoncard'
-
+import React from "react";
+import Commonselectfield from "../../../components/common/Commonselectfield";
+import { Actor, Module, School } from "../../../utils/constants/Selectdata";
 
 const Dashboard = () => {
-
   return (
     <div>
-      <h2>Dashboard</h2>
-<Commoncard />
-    </div>
-  )
-}
+      {/* <div>
+      {Carddata.map((card, index) => (
+        <Commoncard
+          key={index}
+          title={card.title}
+          description={card.description}
+          icon={card.icon}
+          backgroundColor={card.backgroundColor}
+        />
+      ))}
+    </div> */}
 
-export default Dashboard
+    <div style={{display:"flex",justifyContent:"flex-end",gap:"40px"}}>
+    <Commonselectfield  options={School} placeholdertext="School"/>
+    <Commonselectfield  options={Actor} placeholdertext="Actor"/>
+    <Commonselectfield  options={Module} placeholdertext="Module"/>
+    </div>
+    </div>
+  );
+};
+
+export default Dashboard;
