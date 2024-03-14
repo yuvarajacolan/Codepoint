@@ -1,0 +1,29 @@
+.manage_actor_container, .manage_module_container {
+    /* font-family: "Roboto", sans-serif !important; */
+    font-family: "Inter", sans-serif !important;
+}
+
+.manage_actor_container h2, .manage_module_container h2 {
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: capitalize;
+    line-height: 26px;
+    padding-bottom: 46px;
+    color: #232323;
+}
+
+.manage_actor_container .school_name_label, .manage_module_container .school_name_label {
+    font-size: 16px;
+    font-weight: 400;
+    padding-bottom: 5px;
+}
+
+.manage_actor_container .manage_actor_table, .manage_module_container .manage_module_table {
+    margin-top: 45px;
+    /* max-height: 600px;
+    overflow-y: scroll; */
+}
+
+.manage_actor_table .ant-table, .manage_module_table .ant-table {
+    padding: 20px;
+}

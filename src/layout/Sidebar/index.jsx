@@ -43,8 +43,8 @@ const Sidebar = () => {
   return (
     <Layout>
       <Sider trigger={null} collapsible collapsed={collapsed}>
-        <img src={logoimg} className="logosetup" alt="logo" />
-        <Menu mode="inline" defaultSelectedKeys={["1"]}>
+        <img style={{borderRight:"1px solid #E6EFF5"}} src={logoimg} className="logosetup" alt="logo" />
+        <Menu mode="inline" defaultSelectedKeys={[currentMenuItem?.key]}>
           {menuItems.map((item) => (
             <Menu.Item
               key={item.key}
@@ -72,7 +72,6 @@ const Sidebar = () => {
                 onClick={() => setCollapsed(!collapsed)}
                 style={{
                   fontSize: "16px",
-                  width: 64,
                 }}
               />
               <h3 className="router_name">
@@ -94,11 +93,12 @@ const Sidebar = () => {
         </Header>
         <Content
           style={{
-            margin: "24px 16px",
-            padding: 24,
-            minHeight: "99vh",
+            // margin: "24px 16px",
+            padding: "24px 34px",
+            minHeight: "89.5vh",
             background: colorBgContainer,
             borderRadius: borderRadiusLG,
+            backgroundColor:"#F7F7F9",
           }}
         >
           <Outlet />

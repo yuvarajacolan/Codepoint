@@ -6,11 +6,16 @@
 }
 
 .router_name {
-    line-height: 25px;
+    line-height: 33px;
+    font-size: 26px;
+    color: #232323;
+    font-family: "Inter", sans-serif !important;
+    padding-left: 20px;
+    
 }
 
 .header_section {
-    padding: 18px 40px;
+    padding: 18px 34px;
 }
 
 .notification_bell {

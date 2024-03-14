@@ -1,10 +1,111 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Inter:wght@100..900&family=Karla:wght@300;400;500;600;700;800&family=Lato:wght@300;400;700;900&family=Poppins:wght@300;400;500;600;700&family=Public+Sans:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&family=Radio+Canada:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700;800&display=swap");
 
-
-body{
-    font-family: "Roboto", sans-serif !important;
+body {
+  font-family: "Inter", sans-serif !important;
 }
 
 .ant-layout-content{
 background-color: #F7F7F9 !important;
+}
+/* overwrite dropdown */
+
+.ant-select.ant-select-outlined.ant-select-single.ant-select-show-arrow {
+    height: 50px !important;
+}
+
+/* overwrite css for select */
+
+span.ant-select-selection-placeholder {
+  color: #718ebf !important;
+}
+
+span.ant-select-selection-item {
+    color: #718ebf;
+    font-weight: 500;
+}
+.ant-select-selector {
+    border: 1px solid #DFEAF2 !important;
+    border-radius: 15px !important;
+}
+
+/* overwrite css for table */
+
+thead.ant-table-thead th {
+  color: #1a3d77 !important;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+tbody.ant-table-tbody tr td {
+  color: #232323 !important;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.ant-table-thead .ant-table-cell {
+  background-color: #fff !important;
+}
+
+.ant-table-thead .ant-table-cell::before {
+  width: 0 !important;
+}
+
+td.ant-table-cell.ant-table-cell-row-hover {
+    background: #fff !important;
+}
+
+ul.ant-pagination.ant-table-pagination.ant-table-pagination-right {
+    background-color: #fff;
+    margin: 0;
+    padding: 10px 0 30px 0;
+}
+
+/* overwrite model */
+
+.ant-modal.css-dev-only-do-not-override-1uweeqc {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: unset !important;
+}
+
+span.ant-modal-close-x {
+  color: red !important;
+}
+
+span.ant-modal-close-x span {
+  font-size: 18px;
+}
+
+.ant-modal-footer {
+  text-align: center !important;
+}
+
+.ant-modal-footer button {
+  width: 120px !important;
+  height: 40px;
+  border-radius: 15px;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  border: none !important;
+  color: #fff !important;
+}
+
+button.ant-btn.ant-btn-default {
+  background-color: #E93434 !important;
+}
+
+button.ant-btn.ant-btn-primary {
+  background-color: #339688 !important;
+}
+
+
+.ant-modal-title {
+  display: none;
+}
+
+button.ant-modal-close:hover {
+  background-color: unset !important;
 }

@@ -1,4 +1,6 @@
 import { Tag } from "antd";
+import SwitchToggle from "../../components/common/CommonSwitch";
+import deleteImage from "../../assets/images/delete.png"
 
 export const columns = [
   {
@@ -77,3 +79,153 @@ export const data = [
     tags: "Inactive",
   },
 ];
+
+
+export const manage_actor_column = [
+  {
+    id: "slno",
+    title: "SL No",
+    dataIndex: "slno",
+    key: "slno",
+  },
+  {
+    id: "chatbot",
+    title: "Chatbot",
+    dataIndex: "chatbot",
+    key: "chatbot",
+  },
+  {
+    id: "actors",
+    title: "Actors",
+    dataIndex: "actors",
+    key: "actors",
+  },
+  {
+    id: "Status",
+    title: "Status",
+    key: "status",
+    dataIndex: "status",
+    render: (_, { status }) => (
+      // <Tag color={tags == "Active" ? "green" : "red"} key={tags}>
+      //   {tags}
+      // </Tag>
+      <SwitchToggle status={status} />
+    ),
+
+  },
+  {
+
+    id: "action",
+    title: "Action",
+    dataIndex: "actors",
+    key: "actors",
+    render: (_, { tags }) => (
+      <div style={{ cursor: "pointer" }}><img src={deleteImage} alt="deleteIcon" /></div>
+    ),
+
+  }
+];
+
+export const manage_actor_data = [
+  {
+    slno: "01",
+    chatbot: "Echobot",
+    actors: "Staff",
+    status: true,
+  },
+  {
+    slno: "02",
+    chatbot: "Buddy",
+    actors: "Management",
+    status: false,
+  },
+  {
+    slno: "03",
+    chatbot: "Champ",
+    actors: "Teacher",
+    status: true,
+  },
+  {
+    slno: "04",
+    chatbot: "Amigo",
+    actors: "Student",
+    status: false,
+  },
+
+
+]
+
+
+export const manage_module_column = [
+  {
+    id: "slno",
+    title: "SL No",
+    dataIndex: "slno",
+    key: "slno",
+  },
+  {
+    id: "chatbot",
+    title: "Chatbot",
+    dataIndex: "chatbot",
+    key: "chatbot",
+  },
+  {
+    id: "module",
+    title: "Module",
+    dataIndex: "module",
+    key: "module",
+  },
+  {
+    id: "Status",
+    title: "Status",
+    key: "status",
+    dataIndex: "status",
+    render: (_, { status }) => (
+      // <Tag color={tags == "Active" ? "green" : "red"} key={tags}>
+      //   {tags}
+      // </Tag>
+      <SwitchToggle status={status} />
+    ),
+
+  },
+  {
+
+    id: "action",
+    title: "Action",
+    dataIndex: "actors",
+    key: "actors",
+    render: (_, { tags }) => (
+      <div style={{ cursor: "pointer" }}><img src={deleteImage} alt="deleteIcon" /></div>
+    ),
+
+  }
+];
+
+export const manage_module_data = [
+  {
+    slno: "01",
+    chatbot: "Echobot",
+    module: "Attandance",
+    status: true,
+  },
+  {
+    slno: "02",
+    chatbot: "Buddy",
+    module: "Fees",
+    status: false,
+  },
+  {
+    slno: "03",
+    chatbot: "Champ",
+    module: "Remainder",
+    status: true,
+  },
+  {
+    slno: "04",
+    chatbot: "Amigo",
+    module: "Project",
+    status: false,
+  },
+
+
+]
