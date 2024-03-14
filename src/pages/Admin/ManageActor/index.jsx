@@ -75,8 +75,7 @@ const ManageActor = () => {
       </div>
       <Row>
           <Col xs={24} sm={24} md={24} lg={24} xl={24}>
-            <h2 className="grid-top">Active Chatbot Status</h2>
-            <Card>
+            <Card style={{marginTop:"50px"}}>
               <div className="table-container">
                 <Commontable
                   columns={manage_actor_column}
