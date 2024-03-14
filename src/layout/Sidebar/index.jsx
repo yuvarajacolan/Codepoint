@@ -42,7 +42,7 @@ const Sidebar = () => {
     <Layout>
       <Sider trigger={null} collapsible collapsed={collapsed}>
         <img
-          style={{ borderRight: "1px solid #E6EFF5", height:"63px" }}
+          style={{ borderRight: "1px solid #E6EFF5", height:"63px", padding:!collapsed ? "0px": "10px" }}
           src={!collapsed ?logoimg : cpLogo}
           className="logosetup"
           alt="logo"
