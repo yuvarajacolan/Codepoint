@@ -4,3 +4,7 @@
 body{
     font-family: "Roboto", sans-serif !important;
 }
+
+.ant-layout-content{
+background-color: #F7F7F9 !important;
+}

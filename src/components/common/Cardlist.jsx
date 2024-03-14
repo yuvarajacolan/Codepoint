@@ -4,11 +4,8 @@ import '../common/Common.css'
 const { Meta } = Card;
 const Cardlist = ({title,description,icon,backgroundColor}) => (
     <div
-    style={{
-      width: 300,
-    }}
   >
-    <div className='card-container'>
+    <div className='card-container' style={{marginTop:"12px",marginBottom:"12px"}}>
     <div className='cardflex'
       style={{
         position: 'relative',
@@ -44,7 +41,6 @@ const Cardlist = ({title,description,icon,backgroundColor}) => (
         }
       />
     </div>
-    
   </div>
 );
 export default Cardlist;

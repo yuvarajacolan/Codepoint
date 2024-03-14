@@ -1,8 +1,36 @@
-.card-container{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+.card-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
-.cardflex{
-    width: 50%;
+.grid-top {
+  margin: 24px 0 12px 0;
+}
+.table-container {
+  overflow-x: auto;
+}
+.custom-table {
+  width: 100%;
+}
+.custom-select .ant-select-selection-placeholder {
+  color: black !important;
+  font-weight: 600;
+}
+.ant-select-outlined:not(.ant-select-customize-input) .ant-select-selector {
+  border: 1px solid #dfeaf2 !important;
+  background: #ffffff;
+}
+.ant-select .ant-select-arrow {
+  color: #718ebf !important;
+}
+.ant-table-wrapper .ant-table-thead > tr > th,
+.ant-table-wrapper .ant-table-thead > tr > td {
+  color: #1a3d77 !important;
+  font-weight: 700 !important;
+  background-color: #fff !important;
+}
+@media screen and (max-width: 768px) {
+  .custom-table {
+    overflow-x: auto;
+  }
 }

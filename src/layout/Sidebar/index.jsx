@@ -1,8 +1,15 @@
 import React, { useState } from "react";
 import logoimg from "../../assets/images/logo.png";
 import "./style.css";
-import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
-import { Layout, Menu, Button, theme, Row, Typography, Flex } from "antd";
+import { MenuFoldOutlined, MenuUnfoldOutlined, LogoutOutlined, UserOutlined } from "@ant-design/icons";
+import {
+  Layout,
+  Menu,
+  Button,
+  theme,
+  Typography,
+  Dropdown,
+} from "antd";
 import { Link, Outlet, useNavigate, useLocation } from "react-router-dom";
 import { menuItems } from "../../utils/constants/Menuitems";
 import NotificationBell from "../../assets/images/notificationBell.png";
@@ -21,8 +28,18 @@ const Sidebar = () => {
     navigate(path);
   };
 
-  const currentMenuItem = menuItems.find((item) => item.to === location.pathname);
-
+  const currentMenuItem = menuItems.find(
+    (item) => item.to === location.pathname
+  );
+  function handleMenuClick(e) {
+    console.log("click", e);
+  }
+  const menu = (
+    <Menu onClick={handleMenuClick}>
+      <Menu.Item key="1">  <UserOutlined /> Update Profile</Menu.Item>
+      <Menu.Item key="1">  <LogoutOutlined /> Log Out</Menu.Item>
+    </Menu>
+  );
   return (
     <Layout>
       <Sider trigger={null} collapsible collapsed={collapsed}>
@@ -44,7 +61,7 @@ const Sidebar = () => {
           style={{
             padding: "0",
             background: colorBgContainer,
-            height: "100px"
+            height: "100px",
           }}
         >
           <div className="header_section flex-container">
@@ -58,14 +75,19 @@ const Sidebar = () => {
                   width: 64,
                 }}
               />
-              <h3 className="router_name">{currentMenuItem && currentMenuItem.label}</h3>
+              <h3 className="router_name">
+                {currentMenuItem && currentMenuItem.label}
+              </h3>
             </div>
             <div className="flex-container header_right_section">
               <div className="notification_bell">
                 <img src={NotificationBell} alt="notification_bell" />
               </div>
+
               <div className="flex-container">
-                <img src={Profile} alt="profile" />
+                <Dropdown overlay={menu}>
+                  <img src={Profile} alt="profile" />
+                </Dropdown>
               </div>
             </div>
           </div>

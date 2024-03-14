@@ -35,3 +35,6 @@
 .header_right_section div {
     cursor: pointer;
 }
+.custom-margin-top {
+    margin-top: 20px;
+  }
