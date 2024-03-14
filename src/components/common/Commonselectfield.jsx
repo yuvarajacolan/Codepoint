@@ -1,7 +1,7 @@
 import { Row, Col, Select } from 'antd';
 
 const Commonselectfield = ({label, value, options, placeholdertext}) => {
-console.log(options,'checlkkinggg')
+
   return (
    
 <>

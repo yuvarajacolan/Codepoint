@@ -97,15 +97,25 @@ button.ant-btn.ant-btn-default {
   background-color: #E93434 !important;
 }
 
-button.ant-btn.ant-btn-primary {
-  background-color: #339688 !important;
-}
-
-
 .ant-modal-title {
   display: none;
 }
 
 button.ant-modal-close:hover {
   background-color: unset !important;
+}
+.ant-pagination .ant-pagination-item-active a {
+  color: #ffffff;
+  background-color: #961f7f !important;
+}
+.ant-pagination .ant-pagination-item-active {
+  font-weight: 600;
+  background-color: #ffffff;
+  border-color: #97237d !important;
+}
+.btncolor{
+  background-color: #961f7f !important;
+}
+.grid-top {
+  margin: 24px 0 12px 0;
 }

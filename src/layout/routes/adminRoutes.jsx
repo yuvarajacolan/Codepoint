@@ -3,6 +3,7 @@ import Dashboard from "../../pages/Admin/Dashboard";
 import ManageActor from "../../pages/Admin/ManageActor";
 import ManageBot from "../../pages/Admin/ManageBot";
 import ManageModule from "../../pages/Admin/ManageModule";
+import Updateprofile from "../../pages/Admin/UpdateProfile";
 import Loginindex from "../../pages/Auth/login";
 
 const adminRoutes = [
@@ -30,6 +31,10 @@ const adminRoutes = [
       {
         path: "managebot",
         element: <ManageBot />,
+      },
+      {
+        path: "updateprofile",
+        element: <Updateprofile />,
       },
     ],
   },

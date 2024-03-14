@@ -1,20 +1,11 @@
 import React, { useState } from "react";
 import logoimg from "../../assets/images/logo.png";
 import "./style.css";
-import { MenuFoldOutlined, MenuUnfoldOutlined, LogoutOutlined, UserOutlined } from "@ant-design/icons";
-import {
-  Layout,
-  Menu,
-  Button,
-  theme,
-  Typography,
-  Dropdown,
-} from "antd";
+import {MenuFoldOutlined,MenuUnfoldOutlined,LogoutOutlined,UserOutlined} from "@ant-design/icons";
+import { Layout, Menu, Button, theme, Typography, Dropdown } from "antd";
 import { Link, Outlet, useNavigate, useLocation } from "react-router-dom";
 import { menuItems } from "../../utils/constants/Menuitems";
-import NotificationBell from "../../assets/images/notificationBell.png";
 import Profile from "../../assets/images/Profile.png";
-const { Title } = Typography;
 const { Header, Sider, Content } = Layout;
 const Sidebar = () => {
   const navigate = useNavigate();
@@ -36,14 +27,25 @@ const Sidebar = () => {
   }
   const menu = (
     <Menu onClick={handleMenuClick}>
-      <Menu.Item key="1">  <UserOutlined /> Update Profile</Menu.Item>
-      <Menu.Item key="1">  <LogoutOutlined /> Log Out</Menu.Item>
+      <Menu.Item key="1">
+        {" "}
+        <UserOutlined /> Update Profile
+      </Menu.Item>
+      <Menu.Item key="1">
+        {" "}
+        <LogoutOutlined /> Log Out
+      </Menu.Item>
     </Menu>
   );
   return (
     <Layout>
       <Sider trigger={null} collapsible collapsed={collapsed}>
-        <img style={{borderRight:"1px solid #E6EFF5"}} src={logoimg} className="logosetup" alt="logo" />
+        <img
+          style={{ borderRight: "1px solid #E6EFF5" }}
+          src={logoimg}
+          className="logosetup"
+          alt="logo"
+        />
         <Menu mode="inline" defaultSelectedKeys={[currentMenuItem?.key]}>
           {menuItems.map((item) => (
             <Menu.Item
@@ -79,10 +81,6 @@ const Sidebar = () => {
               </h3>
             </div>
             <div className="flex-container header_right_section">
-              <div className="notification_bell">
-                <img src={NotificationBell} alt="notification_bell" />
-              </div>
-
               <div className="flex-container">
                 <Dropdown overlay={menu}>
                   <img src={Profile} alt="profile" />
@@ -98,7 +96,7 @@ const Sidebar = () => {
             minHeight: "89.5vh",
             background: colorBgContainer,
             borderRadius: borderRadiusLG,
-            backgroundColor:"#F7F7F9",
+            backgroundColor: "#F7F7F9",
           }}
         >
           <Outlet />
