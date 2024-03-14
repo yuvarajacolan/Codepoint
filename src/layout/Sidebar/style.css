@@ -67,11 +67,16 @@ body {
   padding-left: 0px !important;
 }
 
+.ant-layout-sider-collapsed li.ant-menu-item span {
+   position: relative;
+   left: 7px;
+}
+
 .ant-menu-light .ant-menu-item-selected {
   position: relative;
 }
 .ant-menu-item .ant-menu-item-selected {
-  padding-left: 0px !important;
+  /* padding-left: 0px !important; */
 }
 
 .flex-container {
@@ -82,4 +87,17 @@ body {
 
 span.anticon.anticon-menu-fold {
   font-size: 25px !important;
+}
+
+
+.ant-layout-sider-collapsed .ant-layout-sider-children ul.ant-menu.ant-menu-root.ant-menu-vertical.ant-menu-light.ant-menu-inline-collapsed.css-dev-only-do-not-override-1uweeqc .ant-menu-item.ant-menu-item-selected span {
+  position: relative;
+  bottom: 12px !important;
+}
+
+aside.ant-layout-sider.ant-layout-sider-dark.ant-layout-sider-collapsed {
+  flex: 0 0 50px !important;
+  width: 70px !important;
+  min-width: unset !important;
+  max-width: unset !important;
 }

@@ -11,6 +11,7 @@ import { Layout, Menu, Button, theme, Typography, Dropdown } from "antd";
 import { Link, Outlet, useNavigate, useLocation } from "react-router-dom";
 import { menuItems } from "../../utils/constants/Menuitems";
 import Profile from "../../assets/images/Profile.png";
+import cpLogo from "../../assets/images/cp2.png"
 const { Header, Sider, Content } = Layout;
 const Sidebar = () => {
   const navigate = useNavigate();
@@ -52,8 +53,8 @@ const Sidebar = () => {
     <Layout>
       <Sider trigger={null} collapsible collapsed={collapsed}>
         <img
-          style={{ borderRight: "1px solid #E6EFF5" }}
-          src={logoimg}
+          style={{ borderRight: "1px solid #E6EFF5", height:"63px", padding:!collapsed ? "0px": "10px" }}
+          src={!collapsed ?logoimg : cpLogo}
           className="logosetup"
           alt="logo"
         />
