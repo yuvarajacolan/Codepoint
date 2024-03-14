@@ -1,0 +1,19 @@
+.bot_add_button {
+    width: 140px;
+    height: 50px;
+    background-color: #951B81;
+    color: #fff;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.bot_title {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 26px;
+}
+
+.bots_table {
+    padding-top: 24px;
+}

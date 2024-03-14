@@ -229,3 +229,41 @@ export const manage_module_data = [
 
 
 ]
+
+
+export const manage_bot_data = [
+  {
+    slno: "01",
+    schoolName:"Central Sr Sec School",
+    chatbot: "Echobot",
+    module: "Attandance",
+    actors:"Staff",
+    status: true,
+  },
+  {
+    slno: "02",
+    schoolName:"Cns Public Hr Sec School",
+    chatbot: "Buddy",
+    module: "Fees",
+    actors:"Management",
+    status: false,
+  },
+  {
+    slno: "03",
+    schoolName:"M B Internation School",
+    chatbot: "Champ",
+    module: "Remainder",
+    actors:"Teacher",
+    status: true,
+  },
+  {
+    slno: "04",
+    schoolName:"Glopal public School",
+    chatbot: "Amigo",
+    module: "Project",
+    actors:"Student",
+    status: false,
+  },
+
+
+]

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import "../../../components/manageActors/manageActor.css"
+import { Row, Col, Card, Table } from "antd";
 import Commonselectfield from '../../../components/common/Commonselectfield'
 import { School } from '../../../utils/constants/Selectdata'
 import Commontable from '../../../components/common/Commontable'
@@ -72,10 +73,23 @@ const ManageActor = () => {
       <div>
         <CommonLabelWithSelect width="340px" options={School} placeholdertext="School" />
       </div>
-      <div className='manage_actor_table'>
+      <Row>
+          <Col xs={24} sm={24} md={24} lg={24} xl={24}>
+            <h2 className="grid-top">Active Chatbot Status</h2>
+            <Card>
+              <div className="table-container">
+                <Commontable
+                  columns={manage_actor_column}
+                  data={manage_actor_data}
+                  className="custom-table"
+                />
+              </div>
+            </Card>
+          </Col>
+        </Row>
+      {/* <div className='manage_actor_table'>
         <Commontable columns={manage_actor_column} data={manage_actor_data} />
-      </div>
-
+      </div> */}
       <DeletePopUp isModalOpen={isModalOpen} handleOk={handleOk} handleCancel={handleCancel} />
     </div>
 
