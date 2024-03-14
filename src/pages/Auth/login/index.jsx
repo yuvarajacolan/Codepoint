@@ -5,11 +5,17 @@ import mainimg from "../../../assets/images/side-img.png";
 import bigimg from "../../../assets/images/voi 1.png";
 import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
 import { Layout, Row, Col, Card, Form, Input, Button } from "antd";
+import { useNavigate } from "react-router-dom";
 
 const Loginindex = () => {
   const onFinish = (values) => {
     console.log("Received values of form: ", values);
   };
+const navigate = useNavigate()
+
+const handleLogin = () => {
+  navigate("/dashboard")
+}
 
   return (
     <>
@@ -102,6 +108,7 @@ const Loginindex = () => {
                     htmlType="submit"
                     className="login-form-button btncolor"
                     size="large"
+                    onClick={handleLogin}
                   >
                     Sign in
                   </Button>

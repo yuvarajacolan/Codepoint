@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import logoimg from "../../assets/images/logo.png";
 import "./style.css";
-import {MenuFoldOutlined,MenuUnfoldOutlined,LogoutOutlined,UserOutlined} from "@ant-design/icons";
+import {
+  MenuFoldOutlined,
+  MenuUnfoldOutlined,
+  LogoutOutlined,
+  UserOutlined,
+} from "@ant-design/icons";
 import { Layout, Menu, Button, theme, Typography, Dropdown } from "antd";
 import { Link, Outlet, useNavigate, useLocation } from "react-router-dom";
 import { menuItems } from "../../utils/constants/Menuitems";
@@ -22,16 +27,22 @@ const Sidebar = () => {
   const currentMenuItem = menuItems.find(
     (item) => item.to === location.pathname
   );
-  function handleMenuClick(e) {
-    console.log("click", e);
-  }
+  const handleMenuClick = (e) => {
+    console.log(e, "hhhhhh");
+    if (e.key === "1") {
+      navigate("/updateprofile");
+    } else if (e.key === "2") {
+      navigate("/");
+    }
+  };
+
   const menu = (
     <Menu onClick={handleMenuClick}>
       <Menu.Item key="1">
         {" "}
         <UserOutlined /> Update Profile
       </Menu.Item>
-      <Menu.Item key="1">
+      <Menu.Item key="2">
         {" "}
         <LogoutOutlined /> Log Out
       </Menu.Item>
@@ -89,7 +100,6 @@ const Sidebar = () => {
                 className="collapsedButton"
                 style={{
                   fontSize: "16px",
-
                 }}
               />
               <h3 className="router_name">
