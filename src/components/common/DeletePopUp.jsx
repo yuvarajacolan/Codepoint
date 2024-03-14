@@ -3,7 +3,7 @@ import { Button, Modal } from 'antd';
 
 function DeletePopUp({ isModalOpen, handleOk, handleCancel }) {
     return (
-        <Modal title="Basic Modal" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+        <Modal centered title="" okText="Confirm" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
             <h4 style={{ textAlign: "center", padding: "20px 0", fontSize: "20px", fontWeight: 500 }}>Are you sure want to delete this ?</h4>
         </Modal>
     )

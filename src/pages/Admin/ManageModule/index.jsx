@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { Row, Col, Card, Table } from "antd";
 import "../../../components/manageActors/manageActor.css"
 import Commonselectfield from '../../../components/common/Commonselectfield'
 import { School } from '../../../utils/constants/Selectdata'
@@ -71,10 +72,20 @@ const ManageModule = () => {
       <div>
         <CommonLabelWithSelect width="340px" options={School} placeholdertext="School" />
       </div>
-      <div className='manage_module_table'>
-        <Commontable columns={manage_module_column} data={manage_module_data} />
-      </div>
-
+      <Row>
+          <Col xs={24} sm={24} md={24} lg={24} xl={24}>
+            <h2 className="grid-top">Active Chatbot Status</h2>
+            <Card>
+              <div className="table-container">
+                <Commontable
+                  columns={manage_module_column}
+                  data={manage_module_data}
+                  className="custom-table"
+                />
+              </div>
+            </Card>
+          </Col>
+        </Row>
       <DeletePopUp isModalOpen={isModalOpen} handleOk={handleOk} handleCancel={handleCancel} />
     </div>
   )

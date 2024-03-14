@@ -5,13 +5,13 @@ body {
   font-family: "Inter", sans-serif !important;
 }
 
-.ant-layout-content{
-background-color: #F7F7F9 !important;
+.ant-layout-content {
+  background-color: #f7f7f9 !important;
 }
 /* overwrite dropdown */
 
 .ant-select.ant-select-outlined.ant-select-single.ant-select-show-arrow {
-    height: 50px !important;
+  height: 50px !important;
 }
 
 /* overwrite css for select */
@@ -21,12 +21,12 @@ span.ant-select-selection-placeholder {
 }
 
 span.ant-select-selection-item {
-    color: #718ebf;
-    font-weight: 500;
+  color: #718ebf;
+  font-weight: 500;
 }
 .ant-select-selector {
-    border: 1px solid #DFEAF2 !important;
-    border-radius: 15px !important;
+  border: 1px solid #dfeaf2 !important;
+  border-radius: 15px !important;
 }
 
 /* overwrite css for table */
@@ -52,24 +52,16 @@ tbody.ant-table-tbody tr td {
 }
 
 td.ant-table-cell.ant-table-cell-row-hover {
-    background: #fff !important;
+  background: #fff !important;
 }
 
 ul.ant-pagination.ant-table-pagination.ant-table-pagination-right {
-    background-color: #fff;
-    margin: 0;
-    padding: 10px 0 30px 0;
+  background-color: #fff;
+  margin: 0;
+  padding: 10px 0 30px 0;
 }
 
 /* overwrite model */
-
-.ant-modal.css-dev-only-do-not-override-1uweeqc {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transform-origin: unset !important;
-}
 
 span.ant-modal-close-x {
   color: red !important;
@@ -91,21 +83,31 @@ span.ant-modal-close-x span {
   font-weight: 500 !important;
   border: none !important;
   color: #fff !important;
+  margin: 0 10px;
 }
 
 button.ant-btn.ant-btn-default {
-  background-color: #E93434 !important;
+  background-color: #e93434 !important;
 }
 
 button.ant-btn.ant-btn-primary {
   background-color: #339688 !important;
 }
 
-
 .ant-modal-title {
-  display: none;
+  font-size: 20px !important;
 }
 
 button.ant-modal-close:hover {
   background-color: unset !important;
+}
+
+.collapsedButton {
+  display: none;
+}
+
+@media only screen and (min-width: 576px) {
+  .collapsedButton {
+    display: block;
+  }
 }

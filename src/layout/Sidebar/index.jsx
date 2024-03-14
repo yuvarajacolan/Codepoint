@@ -42,8 +42,10 @@ const Sidebar = () => {
   );
   return (
     <Layout>
-      <Sider trigger={null} collapsible collapsed={collapsed}>
-        <img style={{borderRight:"1px solid #E6EFF5"}} src={logoimg} className="logosetup" alt="logo" />
+      <Sider
+        trigger={null} collapsible collapsed={collapsed}
+      >
+        <img style={{ borderRight: "1px solid #E6EFF5" }} src={logoimg} className="logosetup" alt="logo" />
         <Menu mode="inline" defaultSelectedKeys={[currentMenuItem?.key]}>
           {menuItems.map((item) => (
             <Menu.Item
@@ -56,6 +58,20 @@ const Sidebar = () => {
           ))}
         </Menu>
       </Sider>
+      {/* <Sider trigger={null} collapsible collapsed={collapsed}>
+        <img style={{borderRight:"1px solid #E6EFF5"}} src={logoimg} className="logosetup" alt="logo" />
+        <Menu mode="inline" defaultSelectedKeys={[currentMenuItem?.key]}>
+          {menuItems.map((item) => (
+            <Menu.Item
+              key={item.key}
+              icon={item.icon}
+              onClick={() => handleNavigation(item.to)}
+            >
+              {item.label}
+            </Menu.Item>
+          ))}
+        </Menu>
+      </Sider> */}
       <Layout>
         <Header
           style={{
@@ -70,8 +86,10 @@ const Sidebar = () => {
                 type="text"
                 icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
                 onClick={() => setCollapsed(!collapsed)}
+                className="collapsedButton"
                 style={{
                   fontSize: "16px",
+
                 }}
               />
               <h3 className="router_name">
@@ -98,7 +116,7 @@ const Sidebar = () => {
             minHeight: "89.5vh",
             background: colorBgContainer,
             borderRadius: borderRadiusLG,
-            backgroundColor:"#F7F7F9",
+            backgroundColor: "#F7F7F9",
           }}
         >
           <Outlet />

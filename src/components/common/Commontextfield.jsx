@@ -4,7 +4,7 @@ const Commontextfield = ({label,placeholder}) => {
 
   return (
     <Row>
-    <Col span={4}>
+    <Col span={24}>
       <div style={{ marginBottom: 8 }}>
         <label>{label}</label>
       </div>
