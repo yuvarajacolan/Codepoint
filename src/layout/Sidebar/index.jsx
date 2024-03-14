@@ -6,7 +6,7 @@ import { Layout, Menu, Button, theme, Typography, Dropdown } from "antd";
 import { Link, Outlet, useNavigate, useLocation } from "react-router-dom";
 import { menuItems } from "../../utils/constants/Menuitems";
 import Profile from "../../assets/images/Profile.png";
-import cpLogo from "../../assets/images/CP.png"
+import cpLogo from "../../assets/images/cp2.png"
 const { Header, Sider, Content } = Layout;
 const Sidebar = () => {
   const navigate = useNavigate();
