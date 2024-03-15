@@ -11,6 +11,7 @@ import Cardlist from "../../../components/common/Cardlist";
 import { columns, data } from "../../../utils/constants/Tabledata";
 import Commontable from "../../../components/common/Commontable";
 import "../../../components/common/Common.css";
+import Reactflow from "../Reactflow/Reactflow";
 
 const Dashboard = () => {
   return (
@@ -86,6 +87,10 @@ const Dashboard = () => {
             </Card>
           </Col>
         </Row>
+        <div style={{width:'auto',height:"500px"}}>
+        <Reactflow />
+        </div>
+        
       </div>
     </>
   );
