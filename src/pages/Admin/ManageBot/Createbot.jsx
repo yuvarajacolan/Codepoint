@@ -10,7 +10,7 @@ console.log(locationbot,'pathhh')
 
   return (
     <>
-    <h2>Manage Bot</h2>
+    <h2>Create Bot</h2>
     <Row gutter={24}>
       <Col span={6}>
 <CommonLabelWithSelect label= "Actor"  width="340px"  />
