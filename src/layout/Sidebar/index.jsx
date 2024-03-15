@@ -25,9 +25,26 @@ const Sidebar = () => {
     navigate(path);
   };
 
-  const currentMenuItem = menuItems.find(
-    (item) => item.to === location.pathname
-  );
+  const pathSegments = location.pathname.split("/").filter(segment => segment !== ""); // Split path and remove empty segments
+  const locationPath = '/' + pathSegments.join('/'); // Reconstruct the path
+  let createLabel = "";
+  let labelKey = ""
+
+  // Find the corresponding item in the menuItems array
+  const findMenuItem = (path, items) => {
+    for (const item of items) {
+      if (item.to === path) {
+        createLabel = item.label;
+        labelKey = item?.key // Set the label if found
+        console.log("itmeKey", item?.key)
+        break;
+      } else if (item.children) {
+        findMenuItem(path, item.children); // Recursively search in children
+      }
+    }
+  };
+
+  findMenuItem(locationPath, menuItems);
 
   
   const handleMenuClick = (e) => {
@@ -59,7 +76,7 @@ const Sidebar = () => {
           className="logosetup"
           alt="logo"
         />
-        <Menu mode="inline" defaultSelectedKeys={[currentMenuItem?.key]}>
+        <Menu mode="inline" defaultSelectedKeys={[labelKey]}>
           {menuItems.map((item) => (
             <Menu.Item
               key={item.key}
@@ -105,7 +122,7 @@ const Sidebar = () => {
                 }}
               />
               <h3 className="router_name">
-                {currentMenuItem && currentMenuItem.label}
+                {createLabel}
               </h3>
             </div>
             <div className="flex-container header_right_section">

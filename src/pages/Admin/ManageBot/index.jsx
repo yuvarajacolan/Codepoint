@@ -20,7 +20,7 @@ const ManageBot = () => {
   };
   const navigate = useNavigate();
 const handleSubmit = () => {
-  navigate("/createbot") 
+  navigate("/managebot/createbot") 
 }
   const manage_actor_column = [
     {

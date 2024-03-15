@@ -31,16 +31,22 @@ const adminRoutes = [
       },
       {
         path: "managebot",
-        element: <ManageBot />,
+        children: [
+          {
+            index: true,
+            element: <ManageBot />,
+          },
+          {
+            path: "createbot",
+            element: <Createbot />,
+          },
+        ]
       },
       {
         path: "updateprofile",
         element: <Updateprofile />,
       },
-      {
-        path: "createbot",
-        element: <Createbot />,
-      },
+
     ],
   },
 ];
