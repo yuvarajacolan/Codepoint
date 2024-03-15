@@ -28,8 +28,9 @@ const Sidebar = () => {
   const currentMenuItem = menuItems.find(
     (item) => item.to === location.pathname
   );
+
+  
   const handleMenuClick = (e) => {
-    console.log(e, "hhhhhh");
     if (e.key === "1") {
       navigate("/updateprofile");
     } else if (e.key === "2") {

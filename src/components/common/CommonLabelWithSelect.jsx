@@ -4,7 +4,7 @@ import { Row, Col, Select } from 'antd';
 function CommonLabelWithSelect({ label, value, options, placeholdertext, width }) {
     return (
         <>
-            <h5 className='school_name_label'>school name</h5>
+            
             <Row>
                 <Col style={{ width: width, height: "50px" }}>
                     <div style={{ marginBottom: 8 }}>

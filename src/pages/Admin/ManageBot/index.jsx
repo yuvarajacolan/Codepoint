@@ -7,6 +7,7 @@ import Commontable from '../../../components/common/Commontable';
 import view from "../../../assets/images/view.png";
 import duo from "../../../assets/images/duo.png";
 import ClonePopUp from '../../../components/common/ClonePopUp';
+import { useNavigate } from 'react-router-dom';
 const ManageBot = () => {
 
   const [isCloneModalOpen, setIsCloneModalOpen] = useState(false);
@@ -17,8 +18,10 @@ const ManageBot = () => {
   const handleCancel = () => {
     setIsCloneModalOpen(false);
   };
-
-
+  const navigate = useNavigate();
+const handleSubmit = () => {
+  navigate("/createbot") 
+}
   const manage_actor_column = [
     {
       id: "slno",
@@ -64,7 +67,6 @@ const ManageBot = () => {
 
     },
     {
-
       id: "action",
       title: "Action",
       dataIndex: "actors",
@@ -74,16 +76,16 @@ const ManageBot = () => {
           <div style={{ cursor: "pointer" }}><img src={view} alt="viewIcon" /></div>
           <div onClick={() => setIsCloneModalOpen(true)} style={{ cursor: "pointer" }}><img src={duo} alt="duoIcon" /></div>
         </Flex>
-
       ),
 
     }
   ];
+  
   return (
     <div>
       <Flex justify={"space-between"} align={"center"}>
         <h3 className='bot_title'>Manage Bot</h3>
-        <button className='bot_add_button'>Add</button>
+        <Button onClick={handleSubmit} type="primary" className='btncolor'>ADD</Button>
       </Flex>
 
       <div className='bots_table'>
