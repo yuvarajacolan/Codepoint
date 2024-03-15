@@ -1,24 +1,44 @@
-import { Col, Row } from 'antd'
-import React from 'react'
-import CommonLabelWithSelect from '../../../components/common/CommonLabelWithSelect'
-import { useLocation } from 'react-router-dom'
+import { Col, Row } from "antd";
+import React from "react";
+import CommonLabelWithSelect from "../../../components/common/CommonLabelWithSelect";
+import { Actor, Module, School } from "../../../utils/constants/Selectdata";
+import Reactflow from "../Reactflow/Reactflow";
 const Createbot = () => {
-  const location = useLocation()
-let locationbot = location.pathname.substring(1)
-
-console.log(locationbot,'pathhh')
-
   return (
     <>
-    <h2>Manage Bot</h2>
-    <Row gutter={24}>
-      <Col span={6}>
-<CommonLabelWithSelect label= "Actor"  width="340px"  />
-      </Col>
-    </Row>
+      <h2>Manage Bot</h2>
+      <Row  gutter={24} style = {{marginTop:"20px"}}>
+        <Col span={5}>
+          <CommonLabelWithSelect
+            options={Actor}
+            placeholdertext="Student"
+            label="Actor"
+            
+          />
+        </Col>
+        <Col span={5}>
+          <CommonLabelWithSelect
+            options={Module}
+            placeholdertext="Homework"
+            label="Actor"
+            
+          />
+        </Col>
+        <Col span={5}>
+          <CommonLabelWithSelect
+            options={School}
+            placeholdertext="International Multischool"
+            label="Actor"
+            
+          />
+        </Col>
+      </Row>
+      <h2 style={{marginTop:"40px"}}>Flow of Q&A</h2>
+      <div style={{width:'auto',height:"500px"}}>
+        <Reactflow />
+        </div>
     </>
-    
-  )
-}
+  );
+};
 
-export default Createbot
+export default Createbot;

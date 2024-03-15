@@ -71,7 +71,12 @@ const ManageActor = () => {
     <div className='manage_actor_container'>
       <h2>list of actors</h2>
       <div>
-        <CommonLabelWithSelect width="340px" options={School} label= "School" placeholdertext="School" />
+        <Row>
+<Col span={6}>
+<CommonLabelWithSelect  options={School} label= "School" placeholdertext="School" />
+</Col>
+        </Row>
+       
       </div>
       <Row>
           <Col xs={24} sm={24} md={24} lg={24} xl={24}>

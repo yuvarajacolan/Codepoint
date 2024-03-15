@@ -6,7 +6,7 @@ function CommonLabelWithSelect({ label, value, options, placeholdertext, width }
         <>
             
             <Row>
-                <Col style={{ width: width, height: "50px" }}>
+                <Col span={24} style={{ height: "50px" }}>
                     <div style={{ marginBottom: 8 }}>
                         <label>{label}</label>
                     </div>

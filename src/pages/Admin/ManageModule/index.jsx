@@ -69,9 +69,11 @@ const ManageModule = () => {
   return (
     <div className='manage_module_container'>
       <h2>list of modules</h2>
-      <div>
-        <CommonLabelWithSelect width="340px"  options={School} placeholdertext="School" label= "School"  />
-      </div>
+      <Row>
+        <Col span={6}>
+        <CommonLabelWithSelect  options={School} placeholdertext="School" label= "School"  />
+        </Col>
+      </Row>
       <Row>
           <Col xs={24} sm={24} md={24} lg={24} xl={24}>
             <Card style={{marginTop:"50px"}}>

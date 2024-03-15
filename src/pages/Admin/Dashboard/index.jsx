@@ -87,9 +87,7 @@ const Dashboard = () => {
             </Card>
           </Col>
         </Row>
-        <div style={{width:'auto',height:"500px"}}>
-        <Reactflow />
-        </div>
+       
         
       </div>
     </>
