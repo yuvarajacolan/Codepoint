@@ -55,9 +55,8 @@ const Sidebar = () => {
       }
     }
   };
-
+  
   findMenuItem(locationPath, menuItems);
-
 
   const handleMenuClick = (e) => {
     if (e.key === "1") {
@@ -100,7 +99,6 @@ const Sidebar = () => {
           ))}
         </Menu>
       </Sider>
-
       <Drawer
         title="sdf"
         placement={"left"}
@@ -150,10 +148,7 @@ const Sidebar = () => {
         >
           <div className="header_section flex-container">
             <div className="flex-container">
-
               <MenuOutlined className="mobileSidebar" type="primary" onClick={showDrawer} />
-
-
               <Button
                 type="text"
                 icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}

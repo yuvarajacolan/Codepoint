@@ -72,25 +72,25 @@ const ManageActor = () => {
       <h2>list of actors</h2>
       <div>
         <Row>
-<Col span={6}>
-<CommonLabelWithSelect  options={School} label= "School" placeholdertext="School" />
-</Col>
-        </Row>
-       
-      </div>
-      <Row>
-          <Col xs={24} sm={24} md={24} lg={24} xl={24}>
-            <Card style={{marginTop:"50px"}}>
-              <div className="table-container">
-                <Commontable
-                  columns={manage_actor_column}
-                  data={manage_actor_data}
-                  className="custom-table"
-                />
-              </div>
-            </Card>
+          <Col xs={24} sm={24} md={12} lg={6}>
+            <CommonLabelWithSelect options={School} label="School" placeholdertext="School" />
           </Col>
         </Row>
+
+      </div>
+      <Row>
+        <Col xs={24} sm={24} md={24} lg={24} xl={24}>
+          <Card style={{ marginTop: "50px" }}>
+            <div className="table-container">
+              <Commontable
+                columns={manage_actor_column}
+                data={manage_actor_data}
+                className="custom-table"
+              />
+            </div>
+          </Card>
+        </Col>
+      </Row>
       {/* <div className='manage_actor_table'>
         <Commontable columns={manage_actor_column} data={manage_actor_data} />
       </div> */}
