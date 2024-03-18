@@ -123,3 +123,7 @@ button.ant-modal-close:hover {
     display: block;
   }
 }
+
+.ant-drawer-content-wrapper {
+  width: 310px !important;
+}

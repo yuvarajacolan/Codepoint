@@ -6,7 +6,10 @@ import {
   MenuUnfoldOutlined,
   LogoutOutlined,
   UserOutlined,
+  MenuOutlined,
+  CloseOutlined
 } from "@ant-design/icons";
+import { Drawer, Radio, Space } from 'antd';
 import { Layout, Menu, Button, theme, Typography, Dropdown } from "antd";
 import { Link, Outlet, useNavigate, useLocation } from "react-router-dom";
 import { menuItems } from "../../utils/constants/Menuitems";
@@ -17,12 +20,21 @@ const Sidebar = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [collapsed, setCollapsed] = useState(false);
+  const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
 
   const handleNavigation = (path) => {
+    setMobileSidebarOpen(false)
     navigate(path);
+  };
+
+  const showDrawer = () => {
+    setMobileSidebarOpen(true);
+  };
+  const onClose = () => {
+    setMobileSidebarOpen(false);
   };
 
   const pathSegments = location.pathname.split("/").filter(segment => segment !== ""); // Split path and remove empty segments
@@ -46,7 +58,7 @@ const Sidebar = () => {
 
   findMenuItem(locationPath, menuItems);
 
-  
+
   const handleMenuClick = (e) => {
     if (e.key === "1") {
       navigate("/updateprofile");
@@ -71,8 +83,8 @@ const Sidebar = () => {
     <Layout>
       <Sider trigger={null} collapsible collapsed={collapsed}>
         <img
-          style={{ borderRight: "1px solid #E6EFF5", height:"63px", padding:!collapsed ? "0px": "10px" }}
-          src={!collapsed ?logoimg : cpLogo}
+          style={{ borderRight: "1px solid #E6EFF5", height: "63px", padding: !collapsed ? "0px" : "10px" }}
+          src={!collapsed ? logoimg : cpLogo}
           className="logosetup"
           alt="logo"
         />
@@ -88,6 +100,32 @@ const Sidebar = () => {
           ))}
         </Menu>
       </Sider>
+
+      <Drawer
+        title="sdf"
+        placement={"left"}
+        closable={false}
+        onClose={onClose}
+        open={mobileSidebarOpen}
+        key={"left"}
+
+      >
+        <Menu className="mobileSidebarList"  defaultSelectedKeys={[labelKey]}>
+          <CloseOutlined className="closeIcon" onClick={onClose} />
+          {menuItems.map((item) => (
+            <Menu.Item
+              key={item.key}
+              icon={item.icon}
+              onClick={() => handleNavigation(item.to)}
+              className=""
+            >
+              {/* <span className="mobileSidebarIcon">{item?.icon}</span> */}
+              {item.label}
+            </Menu.Item>
+          ))}
+        </Menu>
+
+      </Drawer>
       {/* <Sider trigger={null} collapsible collapsed={collapsed}>
         <img style={{borderRight:"1px solid #E6EFF5"}} src={logoimg} className="logosetup" alt="logo" />
         <Menu mode="inline" defaultSelectedKeys={[currentMenuItem?.key]}>
@@ -112,6 +150,10 @@ const Sidebar = () => {
         >
           <div className="header_section flex-container">
             <div className="flex-container">
+
+              <MenuOutlined className="mobileSidebar" type="primary" onClick={showDrawer} />
+
+
               <Button
                 type="text"
                 icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}

@@ -67,6 +67,14 @@ body {
   padding-left: 0px !important;
 }
 
+.mobileSidebarList .ant-menu-item-selected::before {
+  background-image: none !important;
+}
+
+.ant-drawer-body .ant-menu {
+  border-inline-end: none !important;
+}
+
 .ant-layout-sider-collapsed li.ant-menu-item span {
    position: relative;
    left: 7px;
@@ -74,9 +82,6 @@ body {
 
 .ant-menu-light .ant-menu-item-selected {
   position: relative;
-}
-.ant-menu-item .ant-menu-item-selected {
-  /* padding-left: 0px !important; */
 }
 
 .flex-container {
@@ -100,4 +105,77 @@ aside.ant-layout-sider.ant-layout-sider-dark.ant-layout-sider-collapsed {
   width: 70px !important;
   min-width: unset !important;
   max-width: unset !important;
+}
+
+.mobileSidebar {
+  display: none;
+}
+
+.ant-drawer {
+  display: none !important;
+}
+
+.ant-drawer-header {
+  background-color: transparent; 
+  height: 84px;
+  background-image: url("../../assets/images/logo.png");
+  background-repeat: no-repeat;
+  background-size: 72%;
+  background-position: left center;
+}
+
+.ant-drawer-header-title {
+  display: none;
+  height: 70px !important
+}
+
+.ant-drawer-title {
+  display: none;
+}
+
+.closeIcon {
+  position: absolute;
+  right: 7%;
+  top: 3.7%;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.mobileSidebarList {
+  padding-inline-start: 0 !important;
+  margin: 0;
+}
+
+.mobileSidebarList li {
+  list-style-type: none;
+  color: #b1b1b1;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 15px;
+}
+
+.mobileSidebarIcon .anticon {
+  color: #b1b1b1;
+}
+
+.ant-drawer-body {
+  padding-left: 12px !important;
+}
+
+
+@media screen and (max-width: 575px) {
+  aside.ant-layout-sider {
+    display: none !important;
+  }
+
+  .mobileSidebar {
+    display: block !important;
+    font-size: 20px;
+  }
+
+  .ant-drawer {
+    display: block !important;
+  }
 }
