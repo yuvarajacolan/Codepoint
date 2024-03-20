@@ -72,11 +72,12 @@ const ManageActor = () => {
       <h2>list of actors</h2>
       <div>
         <Row>
-          <Col xs={24} sm={24} md={12} lg={6}>
-            <CommonLabelWithSelect options={School} label="School" placeholdertext="School" />
+          <Col xs={24} sm={12} md={8} lg={6} xl={6}>
+            <div style={{ marginBottom: 16 }}>
+              <CommonLabelWithSelect options={School} label="School" placeholdertext="School" />
+            </div>
           </Col>
         </Row>
-
       </div>
       <Row>
         <Col xs={24} sm={24} md={24} lg={24} xl={24}>

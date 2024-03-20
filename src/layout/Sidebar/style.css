@@ -23,6 +23,7 @@ body {
 
 li.ant-menu-item.menu-item {
   color: #b1b1b1 !important;
+  font-weight: 400;
 }
 
 li.ant-menu-item.menu-item::before {
