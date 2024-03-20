@@ -15,10 +15,8 @@
 }
 
 .header_section {
-    padding: 18px 34px;
+    padding: 24px 34px;
 }
-
-
 
 .header_right_section {
     gap: 30px;
@@ -26,6 +24,7 @@
 
 .header_right_section div {
     cursor: pointer;
+    justify-content: end;
 }
 .custom-margin-top {
     margin-top: 20px;

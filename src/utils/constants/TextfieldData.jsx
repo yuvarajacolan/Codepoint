@@ -2,30 +2,37 @@ export const TextfieldDate = [
   {
     label: "First Name",
     placeholder : "First Name",
+    type:"text"
   },
   {
     label:"Last Name",
-    placeholder: "Last Name"
+    placeholder: "Last Name",
+    type:"text"
   },
   {
     label:"Email",
-    placeholder: "Charlenereed@gmail.com"
+    placeholder: "Charlenereed@gmail.com",
+    type:"text"
   },
   {
     label:"Phone Number",
-    placeholder: "897414525"
+    placeholder: "897414525",
+    type:"text"
   },
   {
     label:"Old Password",
-    placeholder: "******"
+    placeholder: "******",
+    type:"password"
   },
   {
     label:"New Password",
-    placeholder: "******"
+    placeholder: "******",
+    type:"password"
   },
   {
     label:"Confirm Password",
-    placeholder: "******"
+    placeholder: "******",
+    type:"password"
   },
 
 ];

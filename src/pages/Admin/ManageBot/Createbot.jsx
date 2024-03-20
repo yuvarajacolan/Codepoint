@@ -6,7 +6,7 @@ import Reactflow from "../Reactflow/Reactflow";
 const Createbot = () => {
   return (
     <>
-      <h2>Manage Bot</h2>
+      <h2>Create Bot</h2>
       <Row  gutter={24} style = {{marginTop:"20px"}}>
         <Col span={5}>
           <CommonLabelWithSelect

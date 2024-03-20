@@ -4,14 +4,13 @@ import { Actor, Module, School } from "../../../utils/constants/Selectdata";
 import Commoncard from "../../../components/common/Commoncard";
 import Chart from "../../../components/dashboard/Chart";
 import "../../../components/dashboard/Dashboard.css";
-import { Row, Col, Card, Table } from "antd";
+import { Row, Col, Card } from "antd";
 import { categories, seriesData } from "../../../utils/constants/ChartData";
 import { Carddata, Cardlistdata } from "../../../utils/constants/Carddata";
 import Cardlist from "../../../components/common/Cardlist";
 import { columns, data } from "../../../utils/constants/Tabledata";
 import Commontable from "../../../components/common/Commontable";
 import "../../../components/common/Common.css";
-import Reactflow from "../Reactflow/Reactflow";
 
 const Dashboard = () => {
   return (
@@ -37,7 +36,6 @@ const Dashboard = () => {
         {Carddata.map((card, index) => (
           <Col xs={24} sm={24} md={12} lg={8} xl={6} key={index}>
             <Commoncard
-              key={index}
               title={card.title}
               description={card.description}
               icon={card.icon}
@@ -57,8 +55,8 @@ const Dashboard = () => {
           <h2 className="grid-top">Feedback of Users</h2>
           <Card>
             {Cardlistdata.map((card, index) => (
-              <Row gutter={[16, 24]}>
-                <Col xs={24} sm={24} md={24} lg={24} xl={24} key={index}>
+              <Row gutter={[16, 24]} key={index}>
+                <Col xs={24} sm={24} md={24} lg={24} xl={24} >
                   <Cardlist
                     key={index}
                     title={card.title}

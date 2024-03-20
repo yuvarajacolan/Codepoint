@@ -52,10 +52,13 @@ const Sidebar = () => {
         break;
       } else if (item.children) {
         findMenuItem(path, item.children); // Recursively search in children
+      } else if (path === "/updateprofile") {
+        createLabel = "Edit Your Details"
       }
     }
+
   };
-  
+
   findMenuItem(locationPath, menuItems);
 
   const handleMenuClick = (e) => {
@@ -93,6 +96,7 @@ const Sidebar = () => {
               key={item.key}
               icon={item.icon}
               onClick={() => handleNavigation(item.to)}
+              className={location?.pathname != "/updateprofile" ? 'active-menu-item' : 'menu-item'}
             >
               {item.label}
             </Menu.Item>
@@ -108,7 +112,7 @@ const Sidebar = () => {
         key={"left"}
 
       >
-        <Menu className="mobileSidebarList"  defaultSelectedKeys={[labelKey]}>
+        <Menu className="mobileSidebarList" defaultSelectedKeys={[labelKey]}>
           <CloseOutlined className="closeIcon" onClick={onClose} />
           {menuItems.map((item) => (
             <Menu.Item
@@ -165,7 +169,7 @@ const Sidebar = () => {
             <div className="flex-container header_right_section">
               <div className="flex-container">
                 <Dropdown overlay={menu}>
-                  <img src={Profile} alt="profile" />
+                  <img width={"40%"} src="https://cdn-icons-png.flaticon.com/128/149/149071.png" alt="profile" />
                 </Dropdown>
               </div>
             </div>
