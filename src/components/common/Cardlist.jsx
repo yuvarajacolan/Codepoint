@@ -1,10 +1,9 @@
-import React from 'react';
-import { Avatar, Card } from 'antd';
-import '../common/Common.css'
+import React from "react";
+import { Avatar, Card } from "antd";
+import "../common/Common.css";
 const { Meta } = Card;
-const Cardlist = ({title,description,icon,backgroundColor}) => (
-    <div
-  >
+const Cardlist = ({ title, description, icon, backgroundColor }) => (
+  <div>
     <div className='card-container' style={{marginTop:"12px",marginBottom:"12px"}}>
     <div className='cardflex'
       style={{
@@ -41,6 +40,8 @@ const Cardlist = ({title,description,icon,backgroundColor}) => (
         }
       />
     </div>
+
+   
   </div>
 );
 export default Cardlist;

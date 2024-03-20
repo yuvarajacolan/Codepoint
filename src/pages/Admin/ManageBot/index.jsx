@@ -84,7 +84,7 @@ const handleSubmit = () => {
   return (
     <div>
       <Flex justify={"space-between"} align={"center"}>
-        <h3 className='bot_title'>Manage Bot</h3>
+        <h3 className='bot_title'>List of module</h3>
         <Button onClick={handleSubmit} type="primary" className='btncolor'>ADD</Button>
       </Flex>
 

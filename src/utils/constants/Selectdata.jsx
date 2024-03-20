@@ -39,12 +39,12 @@ export const Actor = [
 
 export const Module = [
   {
-    value: "Attandance",
-    options: "Attandance",
+    value: "Attendance",
+    options: "Attendance",
   },
   {
-    value: "FEE",
-    options: "FEE",
+    value: "Fee",
+    options: "Fee",
   },
   {
     value: "Remainder",

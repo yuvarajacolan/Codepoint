@@ -79,11 +79,11 @@ const handleLogin = () => {
                   <Input
                     className="box-shadow"
                     size="large"
-                    placeholder="Enter Email or Phone number"
+                    placeholder="Enter Email or Phone Number"
                   />
                 </Form.Item>
                 <Form.Item
-                  name="password"
+                  name="Password"
                   rules={[
                     {
                       required: true,
@@ -94,7 +94,7 @@ const handleLogin = () => {
                   <Input.Password
                     size="large"
                     className="box-shadow"
-                    placeholder="password"
+                    placeholder="Password"
                     iconRender={(visible) =>
                       visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />
                     }
