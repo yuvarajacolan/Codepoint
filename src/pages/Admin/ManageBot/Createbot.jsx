@@ -20,7 +20,7 @@ const Createbot = () => {
           <CommonLabelWithSelect
             options={Module}
             placeholdertext="Homework"
-            label="Actor"
+            label="Module"
             
           />
         </Col>
@@ -28,7 +28,7 @@ const Createbot = () => {
           <CommonLabelWithSelect
             options={School}
             placeholdertext="International Multischool"
-            label="Actor"
+            label="School"
             
           />
         </Col>

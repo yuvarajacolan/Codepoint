@@ -2,7 +2,8 @@ import {
   SettingFilled,
   HomeFilled,
   UserOutlined,
-  CodepenCircleOutlined
+  CodepenCircleOutlined,
+  FileTextFilled
 } from '@ant-design/icons';
 
 
@@ -16,13 +17,13 @@ export const menuItems = [
   {
     key: '2',
     icon: <UserOutlined />,
-    label: 'Manage Actor',
+    label: 'Manage Actors',
     to: '/manageactor',
   },
   {
     key: '3',
     icon: <CodepenCircleOutlined />,
-    label: 'Manage Module',
+    label: 'Manage Modules',
     to: '/managemodule',
   },
   {
@@ -33,10 +34,17 @@ export const menuItems = [
     children: [
       {
         key: '4',
-        label: 'Create Bot',
+        label: 'Manage Bot',
         to: '/managebot/createbot',
       }
 
     ]
   },
+  {
+    key: '5',
+    icon: <FileTextFilled />,
+    label: 'Manage Report',
+    
+  },
+  
 ];

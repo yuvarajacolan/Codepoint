@@ -48,7 +48,7 @@ const Dashboard = () => {
       </Row>
       <Row gutter={[16, 16]}>
         <Col xs={24} sm={24} md={24} lg={12} xl={18}>
-          <h2 className="grid-top">Statics of Active User</h2>
+          <h2 className="grid-top">Statistics of Active Users</h2>
           <div className="chart_box">
             <Chart categories={categories} seriesData={seriesData} />
           </div>
